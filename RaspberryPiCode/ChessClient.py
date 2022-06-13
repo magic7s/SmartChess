@@ -73,19 +73,19 @@ class ChessClient:
                     elif event.key == K_RIGHT:
                         chess.redo()
                     elif event.unicode in ("f","F"):
-                        print chess.getFEN()
+                        print(chess.getFEN())
                     elif event.unicode in ("a","A"):
                         an = chess.getAllTextMoves(chess.AN)
                         if an:
-                            print "AN: " + ", ".join(an)
+                            print("AN: " + ", ".join(an))
                     elif event.unicode in ("s","S"):
                         san = chess.getAllTextMoves(chess.SAN)
                         if san:
-                            print "SAN: " + ", ".join(san)
+                            print("SAN: " + ", ".join(san))
                     elif event.unicode in ("l","L"):
                         lan = chess.getAllTextMoves(chess.LAN)
                         if lan:
-                            print "LAN: " + ", ".join(lan)
+                            print("LAN: " + ", ".join(lan))
                     board = chess.getBoard()
                     turn = chess.getTurn()
                     markPos[0] = -1
@@ -117,7 +117,7 @@ class ChessClient:
                                             res = chess.addMove(markPos,mousePos)                                            
                                         if res:
                                             #print chess.getLastMove()
-                                            print chess.getLastTextMove(chess.SAN)
+                                            print(chess.getLastTextMove(chess.SAN))
                                             board = chess.getBoard()
                                             turn = chess.getTurn()
                                             markPos[0] = -1
